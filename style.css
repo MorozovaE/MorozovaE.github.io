@@ -113,4 +113,6 @@ input:active {
 #description {
   margin-left: 20px;
   padding-right: 20px;
+  color: #727070;
+  font-family: sans-serif ;
 }
