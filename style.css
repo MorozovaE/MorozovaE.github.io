@@ -93,7 +93,7 @@ input {
 }
 .btn {
   border-radius: 50px;
-  background-color: #fff;
+  background-color: var(--white);
   padding: 5px 20px;
   border: 2px solid var(--dark-purple);
   margin: 7px;
@@ -104,10 +104,10 @@ input:active {
 }
 .selected {
   background-color: var(--dark-purple);
-  color: white;
+  color: var(--white);
 }
 .unselected{
-  background-color: white;
+  background-color: var(--white);
   color: #000;
 }
 #description {

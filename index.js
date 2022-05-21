@@ -58,6 +58,7 @@ let num1 = document.getElementById("num1").value;
 let num2 = document.getElementById("num2").value;
 let output = document.getElementById("output");
 let description = document.getElementById("description");
+let body = document.getElementsByTagName("body")[0];
 
 let addDescription = "Addition. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.";
 
@@ -77,6 +78,12 @@ let remainderDescription = "Remainder . Lorem ipsum dolor sit amet consectetur a
 
 let runButton = document.getElementById("runButton");
 runButton.addEventListener("click", run);
+
+body.addEventListener("keypress",(e) => {
+  if(e.keyCode == 13){
+    run();
+  }
+})
 
 function run() {
   let num1 = +document.getElementById("num1").value;
