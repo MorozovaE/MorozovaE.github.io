@@ -41,13 +41,13 @@ function addInterval(a, b) {
   }
   return sum;
 }
-function integerDivision(a,b){
-  let res = Math.floor(a/b);
+function integerDivision(a, b) {
+  let res = Math.floor(a / b);
 
   return res;
 }
-function remainder(a,b){
-  let res = a - (integerDivision(a,b)*b);
+function remainder(a, b) {
+  let res = a - integerDivision(a, b) * b;
 
   return res;
 }
@@ -57,6 +57,23 @@ function remainder(a,b){
 let num1 = document.getElementById("num1").value;
 let num2 = document.getElementById("num2").value;
 let output = document.getElementById("output");
+let description = document.getElementById("description");
+
+let addDescription = "Addition. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.";
+
+let subDescription = "Subtraction . Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.";
+
+let multDescription = "Multiplication . Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.";
+
+let divisionDescription = "Division . Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.";
+
+let powerDescription = "Power . Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.";
+
+let addIntervalDescription = "Interval sum . Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.";
+
+let integerDivisionDescription = "Integer division . Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.";
+
+let remainderDescription = "Remainder . Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.";
 
 let runButton = document.getElementById("runButton");
 runButton.addEventListener("click", run);
@@ -68,27 +85,47 @@ function run() {
 
   let functionName = document.querySelector(".selected").innerText;
 
-  if(functionName == "Addition"){
-    output.value = add(num1,num2);
-  }else if(functionName == "Subtraction"){
-    output.value = subtraction(num1,num2);
-  }else if(functionName == "Multiplication"){
-    output.value = multiplication(num1,num2);
-  }else if(functionName == "Division"){
-    output.value = division(num1,num2);
-  }else if(functionName == "Power"){
-    output.value = power(num1,num2);
-  }else if(functionName == "Interval sum"){
-    output.value = addInterval(num1,num2);
-  }else if(functionName == "Integer division"){
-    output.value = integerDivision(num1,num2);
-  }else if(functionName == "Remainder"){
-    output.value = remainder(num1,num2);
+  if (functionName == "Addition") {
+    output.value = add(num1, num2);
+  } else if (functionName == "Subtraction") {
+    output.value = subtraction(num1, num2);
+  } else if (functionName == "Multiplication") {
+    output.value = multiplication(num1, num2);
+  } else if (functionName == "Division") {
+    output.value = division(num1, num2);
+  } else if (functionName == "Power") {
+    output.value = power(num1, num2);
+  } else if (functionName == "Interval sum") {
+    output.value = addInterval(num1, num2);
+  } else if (functionName == "Integer division") {
+    output.value = integerDivision(num1, num2);
+  } else if (functionName == "Remainder") {
+    output.value = remainder(num1, num2);
   }
 }
 for (let el of document.getElementsByClassName("function-btn")) {
-    el.addEventListener("click", function (e) {
-      document.querySelector(".selected").classList.remove("selected")
-      e.target.classList.add("selected");
-    });
+  
+  el.addEventListener("click", function (e) {
+    document.querySelector(".selected").classList.remove("selected");
+    e.target.classList.add("selected");
+    let functionName = document.querySelector(".selected").innerText;
+
+    if (functionName == "Addition") {
+      description.innerText = addDescription;
+    } else if (functionName == "Subtraction") {
+      description.innerText = subDescription;
+    } else if (functionName == "Multiplication") {
+      description.innerText = multDescription;
+    } else if (functionName == "Division") {
+      description.innerText = divisionDescription;
+    } else if (functionName == "Power") {
+      description.innerText = powerDescription;
+    } else if (functionName == "Interval sum") {
+      description.innerText = addIntervalDescription;
+    } else if (functionName == "Integer division") {
+      description.innerText = integerDivisionDescription;
+    } else if (functionName == "Remainder") {
+      description.innerText = remainderDescription;
+    }
+  });
 }

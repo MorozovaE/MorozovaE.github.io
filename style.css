@@ -110,3 +110,7 @@ input:active {
   background-color: white;
   color: #000;
 }
+#description {
+  margin-left: 20px;
+  padding-right: 20px;
+}
