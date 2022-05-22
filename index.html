@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer src="index.js"></script>
+  <script defer type="module" src="scripts/index.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
@@ -17,29 +17,18 @@
       <input type="text" id="num2" placeholder="Number 2">
       <span class="arrow"> &#8594;</span>
       <input type="text" id="output" readonly>
-      <!-- <div id="output">Result</div> -->
       <button class="run btn" id="runButton">Run</button>
     </div>
     <div class="functions-cont">
       <h2>Functions</h2>
       <div class="category-cont math">
         <h3>Math:</h3>
-        <div class="btn-cont">
-          <button class="function-btn btn selected" id="add">Addition</button>
-          <button class="function-btn btn" id="sub">Subtraction</button>
-          <button class="function-btn btn" id="mult">Multiplication</button>
-          <button class="function-btn btn" id="divis">Division</button>
-          <button class="function-btn btn" id="power">Power</button>  
-          <button class="function-btn btn" id="addInterval">Interval sum</button>
-          <button class="function-btn btn" id="addInterval">Integer division</button>  
-          <button class="function-btn btn" id="addInterval">Remainder</button>  
-        </div>
-
+        <div id="btn-cont"></div>
       </div>
     </div>
     <div class="description-cont">
       <h2>Description</h2>
-      <p id="description">Addition. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus blanditiis molestias eius ducimus sed non quam ad voluptates numquam tempora officia rem vitae, fugit temporibus culpa fuga dolorum nihil.</p>
+      <p id="description"></p>
     </div>
   </div>
 </body>
